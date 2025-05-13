@@ -137,15 +137,6 @@ División: 115
 Turno: Mañana
 EOF
 
-cat README.md
-git add README.md datos_usuarios.txt
-git commit -m "ADD: Añadiendo Readme y datos de usuario"
-git push
-git config --global credential.helper store 
-git push
-git remote set-url origin https://gonzaorue:<TU_TOKEN>@github.com/gonzaorue/TP_AySO.gitC
-CLEAR
-clear
 git reflog
 [200~git reflog show remotes/origin/main~
 git reflog show remotes/origin/main
@@ -189,15 +180,11 @@ git commit -m "Resuelvo conflictos después del pull"
 git push origin main
 git push origin main --force
 clear
-# Crear estructura de carpetas con el nombre del repositorio
 mkdir -p ~/TP_AySO/{materia1,materia2}/{uni1,uni2,uni3}
-# Mostrar estructura (opcional, requiere tree instalado)
 tree ~/TP_AySO
-# Crear script para generar la estructura
 echo '#!/bin/bash' > ~/TP_AySO/script_dir.sh
 echo 'mkdir -p ~/TP_AySO/{materia1,materia2}/{uni1,uni2,uni3}' >> ~/TP_AySO/script_dir.sh
 chmod +x ~/TP_AySO/script_dir.sh
-# Subir cambios al repositorio en GitHub
 cd ~/TP_AySO
 git add script_dir.sh materia1 materia2
 git commit -m "Agrego script y estructura de carpetas para TP AySO"
@@ -215,27 +202,6 @@ tree ~/TP_AySO
 echo 'mkdir -p ~/TP_AySO/{materia1,materia2}/{uni1,uni2,uni3}' > ~/TP_AySO/script_dir.sh
 chmod +x ~/TP_AySO/script_dir.sh
 cd ~/TP_AySO
-git add script_dir.sh
-git commit -m "ADD: Añadiendo script"
-git push origin main
-git pull origin main --allow-unrelated-histories
-git config pull.rebase false
-git config pull.rebase true
-git config pull.ff only
-git pull origin main
-git status
-git add script_dir.sh
-git push
-git pull
-git config advice.diverging false
-git pull
-git push
-git rebase --continue
-git push origin main
-git fetch origin
-git rebase origin/main
-git rebase --continue
-git push origin main
 clear
 history -a 
 cp ~/.bash_history ./Historial_comandos_Apellido.txt
@@ -243,10 +209,10 @@ git add .
 git commit -m "ADD: Historial de comandos de Apellido"
 git push
 clear
-nano Historial_comandos_Apellido.txt
+Historial_comandos_Apellido.txt
 history -a
 cp ~/.bash_history ./Historial_comandos_Apellido.txt
 git add .
 git commit -m "ADD: Historial de comandos de Apellido"
 git push
-history -a
+
